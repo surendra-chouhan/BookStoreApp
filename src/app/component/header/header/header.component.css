@@ -32,21 +32,32 @@
 }
 
 .search{
-    width: 500px;
-    margin-left: 175px; 
+    width: 00px;
+     
     top: 14px;
+    height: 40px;
+    /* background: #FCFCFC 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+     */
+}
+
+input{
+    width: 500px;
+    margin-left: 175px;
     height: 40px;
     background: #FCFCFC 0% 0% no-repeat padding-box;
     border-radius: 3px;
     opacity: 1;
+    
     
 }
 
 .profileimg{
     color: white;
     height: 30px;
-    top: 40px;
-    margin-left: 500px;
+    top: 35px;
+    margin-left: 175px;
     width: 15px;
     height: 15px;
     margin-top: 10px;
@@ -64,7 +75,7 @@
     letter-spacing: 0.45px;
     color: #FFFFFF;
     opacity: 1;
-    margin-left: 475px;
+    margin-left: 150px;
 }
 
 .cartimg{
