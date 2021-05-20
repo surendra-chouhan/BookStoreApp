@@ -31,16 +31,16 @@
     opacity: 1;
 }
 
-.search{
+/* .search{
     width: 00px;
      
     top: 14px;
     height: 40px;
-    /* background: #FCFCFC 0% 0% no-repeat padding-box;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
     border-radius: 3px;
     opacity: 1;
-     */
-}
+    
+} */
 
 input{
     width: 500px;
