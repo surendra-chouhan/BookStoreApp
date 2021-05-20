@@ -17,6 +17,10 @@ import { MatInputModule } from '@angular/material/input';
 import { HeaderComponent } from './component/header/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './component/footer/footer/footer.component';
+import { AddbookComponent } from './component/addBook/addbook/addbook.component';
+import { DeleteBookComponent } from './component/deleteBook/delete-book/delete-book.component';
+import { DisplayComponent } from './component/display/display/display.component';
+import { UpdateBookComponent } from './component/updateBook/update-book/update-book.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { FooterComponent } from './component/footer/footer/footer.component';
     AdminLoginComponent,
     AdminDashboardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AddbookComponent,
+    DeleteBookComponent,
+    DisplayComponent,
+    UpdateBookComponent
   ],
   imports: [
     BrowserModule,
