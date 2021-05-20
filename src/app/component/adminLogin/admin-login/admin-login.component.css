@@ -8,7 +8,6 @@
     border-radius: 10px;
     height: auto;
     width: 25%; 
-    align-items: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,13 +92,15 @@ input{
   } */
 
 
-  .main-div mat-card{
+/* .main-div mat-card{
     padding: 0px;
-}
+} */
 
 .card{
     border: 1px solid #9c9c9c;
     border-radius: 10px;
+    top: 175px; 
+    
 }
 
 .text{
@@ -109,8 +110,8 @@ input{
 
 .login-form{
     padding: 30px;
-    
 }
+
 .login-label{
     background:#A03037;
     color: white;
