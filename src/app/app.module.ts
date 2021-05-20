@@ -13,13 +13,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { HeaderComponent } from './component/header/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FooterComponent } from './component/footer/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatToolbarModule,
     MatCardModule,
     MatIconModule,
-    FlexLayoutModule 
+    MatInputModule,
+    FlexLayoutModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
