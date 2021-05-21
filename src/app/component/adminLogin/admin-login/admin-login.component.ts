@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { AdminserviceService } from '../../../Services/adminservice/adminservice.service';
 
 @Component({
   selector: 'app-admin-login',
@@ -8,21 +9,45 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class AdminLoginComponent implements OnInit {
   public hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
-  password = new FormControl('',[Validators.required]);
+  form: FormGroup;
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-    if(this.password.hasError('required')){
-      return 'You must enter a value';
-    }
+  // getErrorMessage() {
+  //   if (this.email.hasError('required')) {
+  //     return 'You must enter a value';
+  //   }
+  //   if(this.password.hasError('required')){
+  //     return 'You must enter a value';
+  //   }
+  //   return this.email.hasError('email') ? 'Not a valid email' : '';
+  // }
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+  constructor(private formBuilder: FormBuilder, private adminService: AdminserviceService) {
+    this.form = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
+    });  
   }
 
-  constructor() { }
+  submit(){
+    if (this.form.valid) {
+      console.log(this.form.value);
+
+      let reqObj = {
+        email : "bookstore@admin.com",
+        password : "Xyz@123"
+      }
+
+    this.adminService.login(reqObj).subscribe((res)=>{
+      console.log(res)
+    },(error)=>{
+      console.log(error)
+    })
+  }
+  }
+
+  // login(data:any){
+  //   return this.httpService.post('admin/login',data);
+  // }
 
   ngOnInit(): void {
   }

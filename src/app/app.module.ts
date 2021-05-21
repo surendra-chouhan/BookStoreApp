@@ -21,6 +21,7 @@ import { AddbookComponent } from './component/addBook/addbook/addbook.component'
 import { DeleteBookComponent } from './component/deleteBook/delete-book/delete-book.component';
 import { DisplayComponent } from './component/display/display/display.component';
 import { UpdateBookComponent } from './component/updateBook/update-book/update-book.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UpdateBookComponent } from './component/updateBook/update-book/update-b
     MatCardModule,
     MatIconModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
 
   ],
   providers: [],
