@@ -1,0 +1,25 @@
+<mat-dialog-content class="mat-typography" fxLayout="column">
+    <mat-form-field class="example-full-width">
+        <!-- <mat-label>Input</mat-label> -->
+        <input matInput placeholder="Book Name" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Author" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Description" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Quantity" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Price" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Discount Price" required>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Add Book</button>
+</mat-dialog-actions>
