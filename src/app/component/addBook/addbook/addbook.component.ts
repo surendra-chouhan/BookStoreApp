@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../../dialog/dialog/dialog.component';
 
 @Component({
   selector: 'app-addbook',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddbookComponent implements OnInit {
 
-  constructor() { }
+  constructor(private matdialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  openDialog() {
+    this.matdialog.open(DialogComponent);
+  }
 }
