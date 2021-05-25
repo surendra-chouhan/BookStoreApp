@@ -12,8 +12,15 @@ export class HttpserviceService {
 
   }
 
-  post(url:any,data:any){
-    return this.http.post(this.baseurl+url,data);
-    
+  post(url:any,data:any,token:any){
+    return this.http.post(this.baseurl+url,data,token);
+  }
+
+  get(url:any,token:any){
+    return this.http.get(this.baseurl+url,token);  
+  }
+
+  delete(url:any,token:any){
+    return this.http.delete(this.baseurl+url,token);
   }
 }

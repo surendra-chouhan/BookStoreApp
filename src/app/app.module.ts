@@ -21,7 +21,9 @@ import { AddbookComponent } from './component/addBook/addbook/addbook.component'
 import { DeleteBookComponent } from './component/deleteBook/delete-book/delete-book.component';
 import { DisplayComponent } from './component/display/display/display.component';
 import { UpdateBookComponent } from './component/updateBook/update-book/update-book.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { DialogComponent } from './component/dialog/dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http'
     AddbookComponent,
     DeleteBookComponent,
     DisplayComponent,
-    UpdateBookComponent
+    UpdateBookComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { HttpClientModule } from '@angular/common/http'
     MatIconModule,
     MatInputModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
 
   ],
   providers: [],
