@@ -24,7 +24,9 @@ import { UpdateBookComponent } from './component/updateBook/update-book/update-b
 import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from './component/dialog/dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { UserdashboardComponent } from './component/userdashboard/userdashboard/userdashboard.component';
+import { UserdisplayComponent } from './component/userdisplay/userdisplay/userdisplay.component';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     DeleteBookComponent,
     DisplayComponent,
     UpdateBookComponent,
-    DialogComponent
+    DialogComponent,
+    UserdashboardComponent,
+    UserdisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -53,8 +57,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     FlexLayoutModule,
     HttpClientModule,
-    MatDialogModule
-
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

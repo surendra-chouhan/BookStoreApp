@@ -1,6 +1,13 @@
 <div class="head-container" fxLayout="row" fxLayoutAlign="space-between center">
     <h2>Books</h2>
-    <app-addbook></app-addbook>
+    <mat-form-field appearance="fill">
+        <mat-label>Sort by relevance</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let s of sort" [value]="s.value">
+                {{s.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
 </div>
 <div class="container" fxLayout="row wrap" fxLayoutAlign="space-between center">
     <div *ngFor='let book of  bookArray' class="content-card">
@@ -16,9 +23,9 @@
             <div class="price">
                 {{book.price}}
             </div>
-            <div fxLayout="row" fxLayoutAlign="space-between center">
-                <app-update-book [bookArray]="book"></app-update-book>
-                <app-delete-book [bookArray]="book"></app-delete-book>
+            <div fxLayout="row" fxLayoutAlign="center center" class="buttons">
+                <button mat-raised-button class="btn">ADD TO BAG</button>
+                <button mat-raised-button class="btn1">WISHLIST</button>
             </div>
         </div>
     </div>

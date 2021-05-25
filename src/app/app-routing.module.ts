@@ -4,6 +4,7 @@ import { AdminLoginComponent } from './component/adminLogin/admin-login/admin-lo
 import { HeaderComponent } from './component/header/header/header.component';
 import { FooterComponent } from './component/footer/footer/footer.component';
 import { AdminDashboardComponent } from './component/adminDashboard/admin-dashboard/admin-dashboard.component'
+import { UserdashboardComponent } from './component/userdashboard/userdashboard/userdashboard.component';
 
 const routes: Routes = [
   // {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: AdminDashboardComponent
+  },
+  {
+    path: 'userdashboard',
+    component: UserdashboardComponent
   }
   
 ];
