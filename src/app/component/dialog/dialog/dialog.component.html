@@ -1,25 +1,82 @@
-<mat-dialog-content class="mat-typography" fxLayout="column">
+<mat-dialog-content [formGroup]="form" class="mat-typography" fxLayout="column">
     <mat-form-field class="example-full-width">
-        <!-- <mat-label>Input</mat-label> -->
-        <input matInput placeholder="Book Name" required>
+        <input formControlName="bookName" matInput placeholder="Book Name" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Author" required>
+        <input formControlName="author" matInput placeholder="Author" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Description" required>
+        <input formControlName="description" matInput placeholder="Description" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Quantity" required>
+        <input formControlName="quantity" matInput placeholder="Quantity" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Price" required>
+        <input formControlName="price" matInput placeholder="Price" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Discount Price" required>
+        <input formControlName="discount" matInput placeholder="Discount Price" required>
     </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Add Book</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="addBook()">Add Book</button>
 </mat-dialog-actions>
+
+
+<!-- <mat-dialog-content class="mat-typography" fxLayout="column">
+    <mat-form-field class="example-full-width">
+        <input matInput [formControl]="bookName" placeholder="Book Name" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [formControl]="author" placeholder="Author" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [formControl]="description" placeholder="Description" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [formControl]="quantity" placeholder="Quantity" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [formControl]="price" placeholder="Price" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [formControl]="discount" placeholder="Discount Price" required>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="addBook()">Add Book</button>
+</mat-dialog-actions> -->
+
+
+<!-- <mat-dialog-content [formGroup]="form" class="mat-typography" fxLayout="column">
+    <mat-form-field>
+      <mat-label>bookname</mat-label>
+      <input matInput placeholder="Enter bookname" formControlName="bookname" matInput required />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Authorname</mat-label>
+    <input matInput placeholder="Enter Author name" formControlName="Authorname" matInput required />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <input matInput placeholder="Enter description" formControlName="Description" matInput required />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Quantity</mat-label>
+    <input matInput placeholder="Enter quantity" formControlName="Quantity" matInput required />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Price</mat-label>
+    <input matInput placeholder="Enter price" formControlName="Price" matInput required />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Discount Price</mat-label>
+    <input matInput placeholder="Enter discount price" formControlName="Discount" matInput required />
+  </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="addbook()">Submit</button>
+  </mat-dialog-actions> -->
