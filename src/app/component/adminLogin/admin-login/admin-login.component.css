@@ -96,6 +96,10 @@ input{
     padding: 0px;
 } */
 
+.main mat-card{
+    padding: 0px;
+}
+
 .card{
     border: 1px solid #9c9c9c;
     border-radius: 10px;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 import { AdminserviceService } from '../../../Services/adminservice/adminservice.service';
 
 @Component({
@@ -11,17 +12,7 @@ export class AdminLoginComponent implements OnInit {
   public hide = true;
   form: FormGroup;
 
-  // getErrorMessage() {
-  //   if (this.email.hasError('required')) {
-  //     return 'You must enter a value';
-  //   }
-  //   if(this.password.hasError('required')){
-  //     return 'You must enter a value';
-  //   }
-  //   return this.email.hasError('email') ? 'Not a valid email' : '';
-  // }
-
-  constructor(private formBuilder: FormBuilder, private adminService: AdminserviceService) {
+  constructor(private formBuilder: FormBuilder, private adminService: AdminserviceService, private router: Router) {
     this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
@@ -33,21 +24,21 @@ export class AdminLoginComponent implements OnInit {
       console.log(this.form.value);
 
       let reqObj = {
-        email : "bookstore@admin.com",
-        password : "Xyz@123"
+        email : this.form.value.email,
+        password : this.form.value.password
       }
 
-    this.adminService.login(reqObj).subscribe((res)=>{
-      console.log(res)
+      let arr= [] as any;
+      this.adminService.login(reqObj).subscribe((res)=>{
+      console.log(res);
+      arr = res;
+      localStorage.setItem('access', arr.result.accessToken);
+      this.router.navigate(['./dashboard']);
     },(error)=>{
       console.log(error)
     })
   }
   }
-
-  // login(data:any){
-  //   return this.httpService.post('admin/login',data);
-  // }
 
   ngOnInit(): void {
   }
