@@ -27,6 +27,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { UserdashboardComponent } from './component/userdashboard/userdashboard/userdashboard.component';
 import { UserdisplayComponent } from './component/userdisplay/userdisplay/userdisplay.component';
 import { MatSelectModule } from '@angular/material/select';
+import { OrderplacedComponent } from './component/orderPlaced/orderplaced/orderplaced.component';
+import { OrderdetailsComponent } from './component/orderDetails/orderdetails/orderdetails.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +43,9 @@ import { MatSelectModule } from '@angular/material/select';
     UpdateBookComponent,
     DialogComponent,
     UserdashboardComponent,
-    UserdisplayComponent
+    UserdisplayComponent,
+    OrderplacedComponent,
+    OrderdetailsComponent
   ],
   imports: [
     BrowserModule,

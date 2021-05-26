@@ -5,6 +5,7 @@ import { HeaderComponent } from './component/header/header/header.component';
 import { FooterComponent } from './component/footer/footer/footer.component';
 import { AdminDashboardComponent } from './component/adminDashboard/admin-dashboard/admin-dashboard.component'
 import { UserdashboardComponent } from './component/userdashboard/userdashboard/userdashboard.component';
+import { OrderplacedComponent } from './component/orderPlaced/orderplaced/orderplaced.component';
 
 const routes: Routes = [
   // {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'userdashboard',
     component: UserdashboardComponent
+  },
+  {
+    path: 'orderplaced',
+    component: OrderplacedComponent
   }
   
 ];
