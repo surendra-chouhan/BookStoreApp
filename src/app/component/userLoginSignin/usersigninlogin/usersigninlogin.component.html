@@ -1,0 +1,52 @@
+<mat-dialog-content class="mat-typography">
+    <div class="image" fxLayout>
+        <div class="imgCls" fxLayout="center center">
+            <img src="../../../../assets/images/2766594@2x.png" class="img" alt="img">
+        </div>
+        <div class="tab">
+            <mat-tab-group mat-align-tabs="start">
+                <mat-tab label="LOGIN">
+                    <form fxLayoutAlign="stretch" [formGroup]="form" fxLayout="column" class="login-form">
+                        <mat-form-field>
+                            <input matInput placeholder="Email"  formControlName="email" matInput required />
+                            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'"
+                                required />
+                            <!-- <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error> -->
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <button mat-raised-button type="submit" class="btn">Login</button>
+                    </form>
+                </mat-tab>
+                <mat-tab label="SIGN UP">
+                    <form fxLayoutAlign="stretch" [formGroup]="form" fxLayout="column" class="login-form">
+                    <mat-form-field>
+                      <input matInput placeholder="FullName" formControlName="fullName" matInput required />
+                      <!-- <mat-error *ngIf="fullName.invalid">{{getErrorMessage()}}</mat-error> -->
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Email" formControlName="email" matInput required />
+                      <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'" minlength="8" required />
+                        <!-- <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error> -->
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                      </mat-form-field>
+                      <mat-form-field>
+                        <input matInput placeholder="Phone Number" formControlName="phoneNumber" matInput required />
+                        <!-- <mat-error *ngIf="phoneNo.invalid">{{getErrorMessage()}}</mat-error> -->
+                      </mat-form-field>
+                      <button mat-raised-button type="submit" class="btn">Sign Up</button>
+                  </form>
+                </mat-tab>
+            </mat-tab-group>    
+        </div>
+    </div>
+</mat-dialog-content>
