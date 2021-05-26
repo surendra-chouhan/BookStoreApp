@@ -29,6 +29,8 @@ import { UserdisplayComponent } from './component/userdisplay/userdisplay/userdi
 import { MatSelectModule } from '@angular/material/select';
 import { OrderplacedComponent } from './component/orderPlaced/orderplaced/orderplaced.component';
 import { OrderdetailsComponent } from './component/orderDetails/orderdetails/orderdetails.component';
+import { UsersigninloginComponent } from './component/userLoginSignin/usersigninlogin/usersigninlogin.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { OrderdetailsComponent } from './component/orderDetails/orderdetails/ord
     UserdashboardComponent,
     UserdisplayComponent,
     OrderplacedComponent,
-    OrderdetailsComponent
+    OrderdetailsComponent,
+    UsersigninloginComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ import { OrderdetailsComponent } from './component/orderDetails/orderdetails/ord
     FlexLayoutModule,
     HttpClientModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,7 @@ import { AdminDashboardComponent } from './component/adminDashboard/admin-dashbo
 import { UserdashboardComponent } from './component/userdashboard/userdashboard/userdashboard.component';
 import { OrderplacedComponent } from './component/orderPlaced/orderplaced/orderplaced.component';
 import { OrderdetailsComponent } from './component/orderDetails/orderdetails/orderdetails.component';
+import { UsersigninloginComponent } from './component/userLoginSignin/usersigninlogin/usersigninlogin.component';
 
 const routes: Routes = [
   // {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'orderdetails',
     component: OrderdetailsComponent
+  },
+  {
+    path: 'usersigninlogin',
+    component: UsersigninloginComponent
   }
   
 ];
