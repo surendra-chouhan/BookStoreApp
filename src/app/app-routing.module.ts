@@ -6,6 +6,7 @@ import { FooterComponent } from './component/footer/footer/footer.component';
 import { AdminDashboardComponent } from './component/adminDashboard/admin-dashboard/admin-dashboard.component'
 import { UserdashboardComponent } from './component/userdashboard/userdashboard/userdashboard.component';
 import { OrderplacedComponent } from './component/orderPlaced/orderplaced/orderplaced.component';
+import { OrderdetailsComponent } from './component/orderDetails/orderdetails/orderdetails.component';
 
 const routes: Routes = [
   // {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'orderplaced',
     component: OrderplacedComponent
+  },
+  {
+    path: 'orderdetails',
+    component: OrderdetailsComponent
   }
   
 ];
