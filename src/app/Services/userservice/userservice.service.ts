@@ -9,11 +9,26 @@ export class UserserviceService {
 
   constructor(private httpService: HttpserviceService) { }
 
+  token = localStorage.getItem('access');
+
+  options = {
+    headers: new HttpHeaders({
+      'x-access-token': this.token,
+      'Content-Type': 'application/json',
+      'accept': 'application/json'
+    })
+  }
+
   signup(data : any){
     return this.httpService.post('registration', data, '');
   }
 
   login(data : any){
     return this.httpService.post('login', data, '');
+  }
+
+  addBookToCart(id : any, data : any){
+    console.log(id , "userservice id");
+    return this.httpService.post('add_cart_item/' + id, data, this.options);
   }
 }
