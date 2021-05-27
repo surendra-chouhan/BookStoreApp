@@ -13,6 +13,7 @@ export class HttpserviceService {
   }
 
   post(url:any,data:any,token:any){
+    console.log(url, " http service");
     return this.http.post(this.baseurl+url,data,token);
   }
 
