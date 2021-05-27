@@ -19,13 +19,13 @@
                             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                             </button>
                         </mat-form-field>
-                        <button mat-raised-button type="submit" class="btn">Login</button>
+                        <button mat-raised-button type="submit" class="btn" (click)="login()" [mat-dialog-close]="true">Login</button>
                     </form>
                 </mat-tab>
                 <mat-tab label="SIGN UP">
                     <form fxLayoutAlign="stretch" [formGroup]="form" fxLayout="column" class="login-form">
                     <mat-form-field>
-                      <input matInput placeholder="FullName" formControlName="fullName" matInput required />
+                      <input matInput placeholder="Full Name" formControlName="fullName" matInput required />
                       <!-- <mat-error *ngIf="fullName.invalid">{{getErrorMessage()}}</mat-error> -->
                     </mat-form-field>
                     <mat-form-field>
@@ -43,7 +43,7 @@
                         <input matInput placeholder="Phone Number" formControlName="phoneNumber" matInput required />
                         <!-- <mat-error *ngIf="phoneNo.invalid">{{getErrorMessage()}}</mat-error> -->
                       </mat-form-field>
-                      <button mat-raised-button type="submit" class="btn">Sign Up</button>
+                      <button mat-raised-button type="submit" class="btn" (click)="register()" [mat-dialog-close]="true">Sign Up</button>
                   </form>
                 </mat-tab>
             </mat-tab-group>    

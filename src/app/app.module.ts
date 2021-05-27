@@ -31,6 +31,7 @@ import { OrderplacedComponent } from './component/orderPlaced/orderplaced/orderp
 import { OrderdetailsComponent } from './component/orderDetails/orderdetails/orderdetails.component';
 import { UsersigninloginComponent } from './component/userLoginSignin/usersigninlogin/usersigninlogin.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { NgxUiLoaderModule, NgxUiLoaderRouterModule, NgxUiLoaderHttpModule } from "ngx-ui-loader";
 
 @NgModule({
   declarations: [
@@ -67,7 +68,10 @@ import { MatTabsModule } from '@angular/material/tabs';
     HttpClientModule,
     MatDialogModule,
     MatSelectModule,
-    MatTabsModule
+    MatTabsModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderRouterModule,
+    NgxUiLoaderHttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

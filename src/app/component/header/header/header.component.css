@@ -32,8 +32,7 @@
 }
 
 /* .search{
-    width: 00px;
-     
+    width: 800px;
     top: 14px;
     height: 40px;
     background: #FCFCFC 0% 0% no-repeat padding-box;
@@ -42,7 +41,25 @@
     
 } */
 
-input{
+.search-div{
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    align-items: center;
+}
+
+.search{
+    top: 14px;
+    left: 500px;
+    width: 600px;
+    height: 40px;
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    margin-left: 200px;
+}
+
+/* input{
     width: 500px;
     margin-left: 175px;
     height: 40px;
@@ -50,14 +67,14 @@ input{
     border-radius: 3px;
     opacity: 1;
     
-    
-}
+     */
+/* } */
 
 .profileimg{
     color: white;
     height: 30px;
     top: 35px;
-    margin-left: 175px;
+    margin-left: 150px;
     width: 15px;
     height: 15px;
     margin-top: 10px;
@@ -75,7 +92,7 @@ input{
     letter-spacing: 0.45px;
     color: #FFFFFF;
     opacity: 1;
-    margin-left: 150px;
+    margin-left: 120px;
 }
 
 .cartimg{
@@ -87,8 +104,8 @@ input{
 
 .carttext{
     top: 41px;
-    left: 1064px;
-    width: 31px;
+    left: 800px;
+    width: 33px;
     height: 13px;
     text-align: left;
     font: normal normal normal 10px/13px Roboto;
