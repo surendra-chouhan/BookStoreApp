@@ -39,7 +39,7 @@ export class UsersigninloginComponent implements OnInit {
       this.userService.signup(reqObj).subscribe((res) => {
         console.log(res);
 
-        this.router.navigate(['./usersigninlogin']);
+        this.router.navigate(['/usersigninlogin']);
       }, (error) => {
         console.log(error);
       })
@@ -49,7 +49,7 @@ export class UsersigninloginComponent implements OnInit {
   login(){
     if(this.form.valid){
       console.log(this.form.value);
-    }
+    
       let reqObj = {
         email : this.form.value.email,
         password : this.form.value.password
@@ -62,7 +62,7 @@ export class UsersigninloginComponent implements OnInit {
       }, (error) => {
         console.log(error);
       })
-    
+    }
   }
 
 }

@@ -19,7 +19,8 @@
                             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                             </button>
                         </mat-form-field>
-                        <button mat-raised-button type="submit" class="btn" (click)="login()" [mat-dialog-close]="true">Login</button>
+                        <!-- <button mat-raised-button type="submit" class="btn" (click)="login()" >Login</button> -->
+                        <button mat-raised-button type="submit" [mat-dialog-close]="true" (click)="login()" class="btn">Login</button>
                     </form>
                 </mat-tab>
                 <mat-tab label="SIGN UP">
