@@ -59,22 +59,20 @@
     margin-left: 200px;
 }
 
-/* input{
+input{
     width: 500px;
-    margin-left: 175px;
+    margin-left: 195px;
     height: 40px;
     background: #FCFCFC 0% 0% no-repeat padding-box;
     border-radius: 3px;
     opacity: 1;
-    
-     */
-/* } */
+}
 
 .profileimg{
     color: white;
     height: 30px;
     top: 35px;
-    margin-left: 150px;
+    margin-left: 190px;
     width: 15px;
     height: 15px;
     margin-top: 10px;
@@ -92,7 +90,7 @@
     letter-spacing: 0.45px;
     color: #FFFFFF;
     opacity: 1;
-    margin-left: 120px;
+    margin-left: 160px;
 }
 
 .cartimg{
