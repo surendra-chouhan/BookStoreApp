@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminserviceService } from 'src/app/Services/adminservice/adminservice.service';
+import { UserserviceService } from 'src/app/Services/userservice/userservice.service';
 
 interface Sort {
   value: string;
@@ -15,7 +16,7 @@ export class UserdisplayComponent implements OnInit {
   bookArray = [] as any;
   message = "done";
 
-  constructor(private admin: AdminserviceService) { }
+  constructor(private admin: AdminserviceService, private user: UserserviceService) { }
 
 
   sort: Sort[] = [
@@ -37,6 +38,22 @@ export class UserdisplayComponent implements OnInit {
       console.log(arr.result);
       this.bookArray = arr.result;
     }, (error) => {
+      console.log(error);
+    })
+  }
+
+  addToCart(data){
+    console.log(data);
+    let bookID = data._id;
+
+    let reqObj = {
+      quantity : 1
+    }
+    console.log(bookID);
+
+    this.user.addBookToCart(bookID,reqObj).subscribe((res) => {
+      console.log(res);
+    },(error) => {
       console.log(error);
     })
   }

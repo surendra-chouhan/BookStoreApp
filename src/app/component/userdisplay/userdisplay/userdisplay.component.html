@@ -1,6 +1,6 @@
 <div class="head-container" fxLayout="row" fxLayoutAlign="space-between center">
     <h2>Books</h2>
-    <mat-form-field >
+    <mat-form-field class="sort" >
         <mat-label>Sort by relevance</mat-label>
         <mat-select>
             <mat-option *ngFor="let s of sort" [value]="s.value">
@@ -24,7 +24,7 @@
                 {{book.price}}
             </div>
             <div fxLayout="row" fxLayoutAlign="center center" class="buttons">
-                <button mat-raised-button class="btn">ADD TO BAG</button>
+                <button mat-raised-button class="btn" (click)="addToCart(book)">ADD TO BAG</button>
                 <button mat-raised-button class="btn1">WISHLIST</button>
             </div>
         </div>
