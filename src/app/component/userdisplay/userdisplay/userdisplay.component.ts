@@ -20,7 +20,7 @@ export class UserdisplayComponent implements OnInit {
 
   sort: Sort[] = [
     { value: 'Low-To-High', viewValue: 'Price: Low to High' },
-    { value: 'High-To-Low', viewValue: 'Price: Low to High' },
+    { value: 'High-To-Low', viewValue: 'Price: High to Low' },
     { value: 'New', viewValue: 'Newest Arrivals' }
   ];
 
