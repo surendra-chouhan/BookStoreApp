@@ -47,11 +47,25 @@ export class UserdisplayComponent implements OnInit {
     let bookID = data._id;
 
     let reqObj = {
-      quantity : 1
     }
     console.log(bookID);
 
     this.user.addBookToCart(bookID,reqObj).subscribe((res) => {
+      console.log(res);
+    },(error) => {
+      console.log(error);
+    })
+  }
+
+  addToWishlist(data){
+    console.log(data);
+    let bookID = data._id;
+
+    let reqObj = {
+    }
+    console.log(bookID);
+
+    this.user.addBookToWishlist(bookID,reqObj).subscribe((res) => {
       console.log(res);
     },(error) => {
       console.log(error);
