@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserserviceService } from 'src/app/Services/userservice/userservice.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-orderdetails',
@@ -12,7 +13,7 @@ export class OrderdetailsComponent implements OnInit {
   expand1 = 0;
   expand2 = 1;
 
-  constructor(private userService : UserserviceService) { }
+  constructor(private userService : UserserviceService, private snackbar : MatSnackBar) { }
 
   bookArray = [] as any;
   size_of_cartItems;
@@ -38,6 +39,19 @@ export class OrderdetailsComponent implements OnInit {
       console.log(arr.result);
       this.bookArray = arr.result;
       this.size_of_cartItems = arr.result.length;
+    }, (error) => {
+      console.log(error);
+    })
+  }
+
+  deleteBookFromCart(data : any){
+    console.log(data);
+    let id = data._id;
+
+    this.userService.deleteItemFromCart(id).subscribe((res : any) => {
+      console.log(res);
+      this.displayCartItems();
+      this.snackbar.open(res.message, "Close");
     }, (error) => {
       console.log(error);
     })

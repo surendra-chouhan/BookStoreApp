@@ -12,6 +12,9 @@
                 <span class="line1"> {{book.product_id.bookName}} </span><br>
                 <span class="line2"> {{book.product_id.author}} </span><br>
                 <span class="line1"> {{book.product_id.price}} </span>
+                <div>
+                    <i class="material-icons md-18 delete" (click)="deleteBookFromCart(book)">delete</i>
+                </div>
             </div>
         </div>
         <div class="placebutton" fxLayout="row wrap" fxLayoutAlign="end end">
