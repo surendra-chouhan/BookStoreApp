@@ -42,4 +42,12 @@ export class UserserviceService {
   deleteItemFromCart(id : any){
     return this.httpService.delete('remove_cart_item/' + id, this.options);
   }
+
+  editDetails(data : any){
+    return this.httpService.put('edit_user', data, this.options);
+  }
+
+  addOrder(data : any){
+    return this.httpService.post('add/order', data, this.options);
+  }
 }

@@ -24,4 +24,8 @@ export class HttpserviceService {
   delete(url:any,token:any){
     return this.http.delete(this.baseurl+url,token);
   }
+
+  put(url:any,data:any,token:any){
+    return this.http.put(this.baseurl+url,data, token);
+  }
 }
