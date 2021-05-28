@@ -33,6 +33,7 @@ import { UsersigninloginComponent } from './component/userLoginSignin/usersignin
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgxUiLoaderModule, NgxUiLoaderRouterModule, NgxUiLoaderHttpModule } from "ngx-ui-loader";
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     NgxUiLoaderModule,
     NgxUiLoaderRouterModule,
     NgxUiLoaderHttpModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
