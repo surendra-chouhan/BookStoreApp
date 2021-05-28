@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserserviceService } from '../../../Services/userservice/userservice.service';
 
@@ -11,7 +11,7 @@ import { UserserviceService } from '../../../Services/userservice/userservice.se
 })
 export class UsersigninloginComponent implements OnInit {
   hide = true;
-  form : FormGroup;
+  form: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private userService: UserserviceService, private router: Router) {
     this.form = this.formBuilder.group({
@@ -19,50 +19,47 @@ export class UsersigninloginComponent implements OnInit {
       password: ['', Validators.required],
       fullName: ['', Validators.required],
       phoneNumber: ['', Validators.required]
-    });  
+    });
   }
 
   ngOnInit(): void {
   }
 
-  register(){
-    if(this.form.valid){
+  register() {
+    if (this.form.valid) {
       console.log(this.form.value);
 
       let reqObj = {
-        fullName : this.form.value.fullName,
-        email : this.form.value.email,
-        password : this.form.value.password,
-        phone : this.form.value.phoneNumber
+        fullName: this.form.value.fullName,
+        email: this.form.value.email,
+        password: this.form.value.password,
+        phone: this.form.value.phoneNumber
       }
 
       this.userService.signup(reqObj).subscribe((res) => {
         console.log(res);
 
-        this.router.navigate(['/usersigninlogin']);
       }, (error) => {
         console.log(error);
       })
     }
   }
 
-  login(){
-    if(this.form.valid){
+  login() {
+    if (this.form.valid) {
       console.log(this.form.value);
-    
-      let reqObj = {
-        email : this.form.value.email,
-        password : this.form.value.password
-      }
-
-      this.userService.login(reqObj).subscribe((res) => {
-        console.log(res);
-
-        this.router.navigate(['/userdashboard']);
-      }, (error) => {
-        console.log(error);
-      })
     }
-  }
+    let reqObj = {
+      email: this.form.value.email,
+      password: this.form.value.password
+    }
 
+    this.userService.login(reqObj).subscribe((res: any) => {
+      console.log(res);
+      localStorage.setItem("access", res.result.accessToken);
+      this.router.navigate(['/userdashboard']);
+    }, (error) => {
+      console.log(error);
+    })
+  }
 }
