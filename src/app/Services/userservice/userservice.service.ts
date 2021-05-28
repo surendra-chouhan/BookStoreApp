@@ -28,7 +28,14 @@ export class UserserviceService {
   }
 
   addBookToCart(id : any, data : any){
-    console.log(id , "userservice id");
     return this.httpService.post('add_cart_item/' + id, data, this.options);
+  }
+
+  getBookFromCart(){
+    return this.httpService.get('get_cart_items', this.options);
+  }
+
+  addBookToWishlist(id : any, data : any){
+    return this.httpService.post('add_wish_list/' + id, data, this.options);
   }
 }
