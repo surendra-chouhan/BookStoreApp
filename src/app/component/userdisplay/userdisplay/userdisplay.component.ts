@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminserviceService } from 'src/app/Services/adminservice/adminservice.service';
 import { UserserviceService } from 'src/app/Services/userservice/userservice.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 interface Sort {
   value: string;
@@ -16,7 +17,7 @@ export class UserdisplayComponent implements OnInit {
   bookArray = [] as any;
   message = "done";
 
-  constructor(private admin: AdminserviceService, private user: UserserviceService) { }
+  constructor(private admin: AdminserviceService, private user: UserserviceService, private snackbar : MatSnackBar) { }
 
 
   sort: Sort[] = [
@@ -45,6 +46,7 @@ export class UserdisplayComponent implements OnInit {
   addToCart(data){
     console.log(data);
     let bookID = data._id;
+    let arr = [] as any;
 
     let reqObj = {
     }
@@ -52,23 +54,30 @@ export class UserdisplayComponent implements OnInit {
 
     this.user.addBookToCart(bookID,reqObj).subscribe((res) => {
       console.log(res);
+      arr = res;
+      this.snackbar.open(arr.message, "Close");
     },(error) => {
       console.log(error);
+      this.snackbar.open(arr.message, "Close");
     })
   }
 
   addToWishlist(data){
     console.log(data);
     let bookID = data._id;
-
+    let arr = [] as any;
+    
     let reqObj = {
     }
     console.log(bookID);
 
     this.user.addBookToWishlist(bookID,reqObj).subscribe((res) => {
       console.log(res);
+      arr = res;
+      this.snackbar.open(arr.message, "Close");
     },(error) => {
       console.log(error);
+      this.snackbar.open(arr.message, "Close");
     })
   }
 }

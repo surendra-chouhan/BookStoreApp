@@ -32,6 +32,7 @@ import { OrderdetailsComponent } from './component/orderDetails/orderdetails/ord
 import { UsersigninloginComponent } from './component/userLoginSignin/usersigninlogin/usersigninlogin.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgxUiLoaderModule, NgxUiLoaderRouterModule, NgxUiLoaderHttpModule } from "ngx-ui-loader";
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { NgxUiLoaderModule, NgxUiLoaderRouterModule, NgxUiLoaderHttpModule } fro
     MatTabsModule,
     NgxUiLoaderModule,
     NgxUiLoaderRouterModule,
-    NgxUiLoaderHttpModule
+    NgxUiLoaderHttpModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

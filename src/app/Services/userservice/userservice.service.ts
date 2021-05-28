@@ -38,4 +38,8 @@ export class UserserviceService {
   addBookToWishlist(id : any, data : any){
     return this.httpService.post('add_wish_list/' + id, data, this.options);
   }
+
+  deleteItemFromCart(id : any){
+    return this.httpService.delete('remove_cart_item/' + id, this.options);
+  }
 }

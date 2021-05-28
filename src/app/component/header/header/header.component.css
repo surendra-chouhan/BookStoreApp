@@ -80,6 +80,10 @@ input{
     height: 20px;
 }
 
+.profileimg:hover{
+    cursor: pointer;
+}
+
 .profiletext{
     top: 75px;
     left: 1064px;
@@ -98,6 +102,10 @@ input{
     margin-top: 10px;
     margin-right: 30px;
     height: 20px;
+}
+
+.cartimg:hover{
+    cursor: pointer;
 }
 
 .carttext{
