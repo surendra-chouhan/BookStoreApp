@@ -2,16 +2,16 @@
 <div class="maincontaintentItem">
     <div class="place">
         <div class="cardbox" fxLayoutAlign="start center">
-            My card(2)
+            My card({{size_of_cartItems}})
         </div>
-        <div fxLayout="row wrap">
+        <div fxLayout="row wrap" *ngFor="let book of bookArray">
             <div class="book">
                 <img class="img1" src="../../../../assets/images/bookimage.png">
             </div>
             <div class="detail" fxLayout="column wrap">
-                <span class="line1"> Dont Me Make Think</span><br>
-                <span class="line2"> by Steve Krug </span><br>
-                <span class="line1"> Rs.1500</span>
+                <span class="line1"> {{book.product_id.bookName}} </span><br>
+                <span class="line2"> {{book.product_id.author}} </span><br>
+                <span class="line1"> {{book.product_id.price}} </span>
             </div>
         </div>
         <div class="placebutton" fxLayout="row wrap" fxLayoutAlign="end end">
