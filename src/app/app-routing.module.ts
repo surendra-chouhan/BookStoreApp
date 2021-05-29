@@ -10,11 +10,11 @@ import { OrderdetailsComponent } from './component/orderDetails/orderdetails/ord
 import { UsersigninloginComponent } from './component/userLoginSignin/usersigninlogin/usersigninlogin.component';
 
 const routes: Routes = [
-  // {
-  //   path : "",
-  //   redirectTo: "login",
-  //   pathMatch: "full"
-  // },
+  {
+    path : "",
+    redirectTo: "userdashboard",
+    pathMatch: "full"
+  },
   {
     path: 'login',
     component: AdminLoginComponent
@@ -51,7 +51,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
