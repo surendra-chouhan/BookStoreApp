@@ -59,7 +59,7 @@
     background: #FCFCFC 0% 0% no-repeat padding-box;
     border-radius: 3px;
     opacity: 1;
-    margin-left: 200px;
+    margin-left: 75px;
 }
 
 input{
@@ -75,7 +75,7 @@ input{
     color: white;
     height: 30px;
     top: 35px;
-    margin-left: 400px;
+    margin-left: 200px;
     width: 15px;
     height: 15px;
     margin-top: 10px;
@@ -97,7 +97,7 @@ input{
     letter-spacing: 0.45px;
     color: #FFFFFF;
     opacity: 1;
-    margin-left: 375px;
+    margin-left: 175px;
 }
 
 .cartimg{
